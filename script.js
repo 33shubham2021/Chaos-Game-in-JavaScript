@@ -54,6 +54,3 @@ function draw2(){
 }
 
 draw2();            //Why some problem with draw(3 , 2) ...ie declaring n inside the function
-
-
-
