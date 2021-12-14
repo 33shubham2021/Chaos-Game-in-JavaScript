@@ -3,7 +3,7 @@ $(document).ready(function(){
 });
 
 
-
+window.alert("Try viewing the web page at 90% to 100% zoom for best experience");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 // const left  =document.getElementById("left");
