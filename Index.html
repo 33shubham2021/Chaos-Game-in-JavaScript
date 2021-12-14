@@ -1,15 +1,107 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>First Canvas Project</title>
+   <title>Chaos Game by Shubham</title>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   <link rel="stylesheet" href="style.css">
   
     
   </script>
  </head>
  <body >
-   <canvas id="canvas" width="600" height="600"></canvas>
+   <section id="left">
+   <canvas id="canvas" width="800" height="750"></canvas>
+   </section>
+
+   <aside id="right">
+     <!-- <div id="control-area">
+       <h1>I am control area</h1>
+     </div>
+     <div id="description">
+       <h1>
+         I am description area
+       </h1>
+     </div> -->
+     <div id="container" style="width: 80%;height: 80%;">
+      <div class="ui floating message">
+          Enter number of bigger vertices: 
+          <div class="ui input focus">
+              <input id="nthsidedpolygon" type="number" placeholder="must be greater than 2" style="width:200px"/>
+          </div>
+          <br/>
+          Enter %age of distance to travel: 
+          <div class="ui input focus">
+              <input id="distratio" type="number" placeholder="Try 61.8 i.e GoldenRatio Inverse" style="width:200px"/>
+          </div>
+          <br/>
+      </div>
+      <button class="ui primary button" onclick="playForSide()">
+          Amaze me!
+      </button>
+      
+      <div class="ui divider"></div>
+
+      <div class="ui styled accordion">
+          <div class="active title">
+              <i class="dropdown icon"></i>
+              How this works?
+          </div>
+          <div class="active content">
+              <ul class="list">
+                  <li>We start with a random point.</li>
+                  <li>In each step, we chose randomly one of the bigger vertex and move 50% (or what ever %age you specified) towards it from our current position.</li>
+                  <li>We keep repeating the previous step till infinity.</li>
+              </ul>
+          </div>
+          <div class="title">
+              <i class="dropdown icon"></i>
+              Why I made it?
+          </div>
+          <div class="content">
+              <ul class="list">
+                  <li>I wanted to challenge myself by developing a website</li>
+                  <li>I love Math + Fractals. I thoroughly enjoyed making this chaos out of nothing in JavaScript.</li>
+              </ul>
+          </div>
+          <div class="title">
+              <i class="dropdown icon"></i>
+              Impressed? Want to learn the maths behind this animation?? 😁
+          </div>
+          <div class="content">
+              <ul class="list">
+                  <li>Watch a very simple explaination by NUMBERPHILE <a href="https://www.youtube.com/watch?v=kbKtFN71Lfs&t=448s" target="_blank">here</a> </li>
+                  <li>Learn the deep mathematics from the GOD himself... <a href="https://www.youtube.com/watch?v=gB9n2gHsHN4&t=32s" target="_blank">3BLUE1BROWN </a></li>
+                  
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div id="api">
+    <button type="button" id="fetch-button" style="margin:10px" >
+      BORED!!! Click Me to get Dad Jokes
+    </button>
+    <div id="jokes-container" style="margin: 20px;" style="width: 100%; height: 100%;">
+      <h1 id="joke">
+        Jokes will appear here
+      </h1>
+
+    </div>
+  </div> 
+   </aside>
    <script src="script.js"></script>
+   
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142508299-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142508299-2');
+    </script>
  </body>
 </html>
